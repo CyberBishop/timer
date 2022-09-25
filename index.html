@@ -3,6 +3,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>NCA TIMER</title>
   </head>
   <body>
@@ -33,82 +34,3 @@
     <script src="./main.js"></script>
   </body>
 </html>
-
-<style>
-  body {
-    font-family: monaco;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: -100px;
-    overflow: hidden;
-    background-color: black;
-  }
-
-  .time-display {
-    margin-top: 0;
-    display: flex;
-    font-size: 400px;
-    font-weight: 900;
-    color: white;
-  }
-
-  .input-box-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 50;
-    left: 0;
-    right: 0;
-    margin-bottom: 100px;
-  }
-
-  .input-box-container input {
-    height: 60px;
-    width: 500px;
-    font-size: 50px;
-    align-items: center;
-  }
-
-  .input-box-container button {
-    height: 60px;
-    width: 200px;
-    font-size: 50px;
-    font-weight: bolder;
-  }
-
-  .non-active {
-    display: none;
-  }
-
-  .active {
-    color: white;
-  }
-
-  .time-up {
-    font-size: 210px;
-    font-weight: 900;
-    color: white;
-    animation: animate 0.5s linear infinite;
-  }
-
-  @keyframes animate {
-    0% {
-      opacity: 0;
-      color: white;
-    }
-
-    50% {
-      opacity: 0.9;
-      color: white;
-    }
-
-    100% {
-      opacity: 0;
-      color: white;
-    }
-  }
-</style>

@@ -1,3 +1,19 @@
+// Get the input field
+let input = document.getElementById("input");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    setDefValue();
+  }
+});
+
+
+
 // Select Every Count Container
 let countContainer = document.querySelectorAll(".count-digit");
 let timeDisplay = document.getElementById('time-display');
