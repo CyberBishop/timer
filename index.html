@@ -1,0 +1,114 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NCA TIMER</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="input-box-container">
+        <input type="text" id="input" placeholder="How Many Minutes" />
+        <button
+          id="set-time"
+          onclick="setDefValue();"
+          style="margin-left: 10px"
+        >
+          SET
+        </button>
+        <button id="stop-timer" style="margin-left: 10px">STOP</button>
+      </div>
+
+      <div class="time-display" id="time-display">
+        <p class="count-digit">0</p>
+        <p class="count-digit">0</p>
+        <p>:</p>
+        <p class="count-digit">0</p>
+        <p class="count-digit">0</p>
+      </div>
+      <div>
+        <p id="time-up" class="time-up non-active">Time UP!</p>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+<style>
+  body {
+    font-family: monaco;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -100px;
+    overflow: hidden;
+    background-color: black;
+  }
+
+  .time-display {
+    margin-top: 0;
+    display: flex;
+    font-size: 400px;
+    font-weight: 900;
+    color: white;
+  }
+
+  .input-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50;
+    left: 0;
+    right: 0;
+    margin-bottom: 100px;
+  }
+
+  .input-box-container input {
+    height: 60px;
+    width: 500px;
+    font-size: 50px;
+    align-items: center;
+  }
+
+  .input-box-container button {
+    height: 60px;
+    width: 200px;
+    font-size: 50px;
+    font-weight: bolder;
+  }
+
+  .non-active {
+    display: none;
+  }
+
+  .active {
+    color: white;
+  }
+
+  .time-up {
+    font-size: 210px;
+    font-weight: 900;
+    color: white;
+    animation: animate 0.5s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      opacity: 0;
+      color: white;
+    }
+
+    50% {
+      opacity: 0.9;
+      color: white;
+    }
+
+    100% {
+      opacity: 0;
+      color: white;
+    }
+  }
+</style>
